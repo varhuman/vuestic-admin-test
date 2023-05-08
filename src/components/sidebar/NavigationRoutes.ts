@@ -20,6 +20,24 @@ export default {
     },
     {
       name: 'statistics',
+      displayName: 'menu.controller',
+      meta: {
+        icon: 'vuestic-iconset-statistics',
+      },
+      disabled: true,
+      children: [
+        {
+          name: 'hair-style-design',
+          displayName: 'menu.hair-style-design',
+        },
+        {
+          name: 'clothes-model-design',
+          displayName: 'menu.clothes-model-design',
+        },
+      ],
+    },
+    {
+      name: 'statistics',
       displayName: 'menu.statistics',
       meta: {
         icon: 'vuestic-iconset-statistics',

@@ -46,6 +46,29 @@ const routes: Array<RouteRecordRaw> = [
         ],
       },
       {
+        name: 'fashion-dashboard',
+        path: 'fashion-dashboard',
+        component: RouteViewComponent,
+        children: [
+          {
+            name: 'hair-style-design',
+            path: 'hair-style-design',
+            component: () => import('../pages/admin/fashion-dashboard/hair-style-design/HairStyleDesign.vue'),
+            meta: {
+              wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Charts',
+            },
+          },
+          {
+            name: 'clothes-model-design',
+            path: 'clothes-model-design',
+            component: () => import('../pages/admin/fashion-dashboard/clothes-model-design/ClothesModelDesign.vue'),
+            meta: {
+              wikiLink: 'https://github.com/epicmaxco/vuestic-admin/wiki/Progress-Bars',
+            },
+          },
+        ],
+      },
+      {
         name: 'forms',
         path: 'forms',
         component: RouteViewComponent,
