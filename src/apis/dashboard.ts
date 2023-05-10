@@ -25,13 +25,13 @@ export const getTemplateName = async () => {
     }
 }
 
-export const submit = async (templateName: string, imageFile: File) => {
-
-    console.log("请求发送：templatename=", templateName, "  imageFile=", imageFile)
+export const submit = async (folderName: string, templateName: string, imageFile: File) => {
+    console.log("请求发送：folderName=",folderName," templatename=", templateName, "  imageFile=", imageFile)
     // 创建一个新的 FormData 实例
     const formData = new FormData();
 
     // 添加模板名称和图像文件到表单数据
+    formData.append('folderName', folderName);
     formData.append('templateName', templateName);
     formData.append('image', imageFile);
 
